@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/template:: head"></head>
+<meta charset="UTF-8">
+<head>
+<meta charset="ISO-8859-1">
+<title>Buscar Numeros</title>
+</head>
+<body>
+
+<header th:replace="plantilla/template:: header"></header>
+
+	<h1>BUSCAR RECURSOS</h1>
+	
+	<p>Para poder ealizar esta busqueda es necesario haber buscado en las respectivas ventanas el Id tanto del cliente, como del usuario y del producto.</p>
+	
+	<div class=" col-xl-2 col-lg-3 col-md-4 col-sm-6" id="formulario"> 
+			<form th:action="@{/BuscarClienteProducto}" th:object="${BuscarNumero}" method="post"> 
+				
+				<div>
+				<label > Buscar Producto por Id producto:</label><input type="text"
+						name="numeroProducto" id="numeroProducto"
+						class="form-control" value="" />
+				</div>
+				<div>
+				<label > Buscar Usario por Id usuario:</label><input type="text"
+						name="numeroUsuario" id="numeroUsuario"
+						class="form-control" value="" />
+				</div>
+				<div>
+				<label > Buscar Cliente por Id cliente:</label><input type="text"
+						name="numeroCliente" id="numeroCliente"
+						class="form-control" value="" />
+				</div>
+				<br>
+				<button type="submit" class="btn btn-primary">Buscar</button>
+				
+			</form>
+			
+		<br>
+		<br>
+		<br>
+		</div>
+	<a  th:href="@{/realizarVenta}" class="btn btn-success">Ir a realizar Venta<a/>
+
+</body>
+</html>

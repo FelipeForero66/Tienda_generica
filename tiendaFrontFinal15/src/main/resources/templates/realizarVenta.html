@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/template:: head">
+</head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="/main.js"></script>
+</head>
+<script type="text/javascript">
+
+/*$(document).ready( () =>{
+	
+	$ajax({
+		url:'http://localhost:8090/tiendagenerica/v1/cliente',
+		type:'GET',
+		dataType:'json',
+		success: function(res){
+			console.log(res);
+		}
+	})
+}*/
+
+</script>
+
+<body>
+<header th:replace="plantilla/template:: header"></header>
+<br>
+<br>
+<h1>Realizar ventas</h1>
+	<br>
+	
+<div class=" col-xl-2 col-lg-3 col-md-4 col-sm-6" id="formulario"> 
+
+
+<form method="post" th:action="@{/realizarVenta}" th:object="${venta}">
+ 
+  
+ 			   <div class="form-group">
+					<label>Id Cliente:</label><input type="text" name="idCliente"
+						class="form-control" th:value="${IdCliente.id}"  />
+				</div>
+				<div class="form-group">
+					<label>Id Usuario:</label><input type="text" name="idUsuario"
+						class="form-control" th:value="${IdUsarios.id}" />
+				</div>
+
+				<div class="form-group">
+					<label>Valor Venta:</label><input type="text" name="valorVenta"
+						class="form-control" th:value="${valorCompra}" />
+				</div>
+
+				<div class="form-group">
+					<label>Iva Venta:</label><input type="text" name="ivaVenta"
+						class="form-control" th:value="${valorIva}" />
+				</div>
+				
+				<div class="form-group">
+					<label>Total:</label><input type="text" name="totalVenta"
+						class="form-control" th:value="${valorventa}" />
+				</div>
+  
+  <br>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+</div>
+
+			<div class="cuadros25">
+		<table class="table" >
+			<thead>
+				<tr class="table1">
+					<th class="table1">Id Cliente</th>
+					<th class="table1">Numero Cliente</th>
+					<th class="table1">Nombre Cliente</th>
+					
+				</tr>
+				
+			</thead>
+			
+			<tbody>
+				<tr th:each="u:${IdCliente}">
+					<td th:text="${IdCliente.id}"></td>
+					<td th:text="${u.numeroDocumento}"></td>
+					<td th:text="${u.nombre}"></td>
+
+					
+				</tr>
+			</tbody>
+		</table>
+		
+		<table class="table" >
+			<thead>
+				<tr class="table1">
+					<th class="table1">Codigo Usuario</th>
+					<th class="table1">NumeroDocumento</th>
+					<th class="table1">nombre</th>
+					
+				</tr>
+				
+			</thead>
+			
+			<tbody>
+				<tr th:each="u:${IdUsarios}">
+				<td th:text="${u.id}"></td>
+					<td th:text="${u.numeroDocumento}"></td>
+				<td th:text="${u.nombre}"></td>
+					
+
+					
+				</tr>
+			</tbody>
+		</table>
+		
+		<table class="table" >
+			<thead>
+				<tr class="table1">
+					<th class="table1">Codigo Producto</th>
+					<th class="table1">nombre</th>
+					<th class="table1">iva compra</th>
+					<th class="table1">precio compra</th>
+					<th class="table1">precio venta</th>
+					
+				</tr>
+				
+			</thead>
+			
+			<tbody>
+				<tr th:each="u:${productosVentas}">
+					<td th:text="${u.id}"></td>
+					<td th:text="${u.nombre}"></td>
+					<td th:text="${u.ivaCompra}"></td>
+					<td th:text="${u.precioCompra}"></td>
+					<td th:text="${u.precioVenta}"></td>
+					
+				</tr>
+			</tbody>
+		</table>
+			
+			
+
+	<!-- cnd jquery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+ crossorigin="anonymous"></script>
+ 
+ <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/template:: head">
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<header th:replace="plantilla/template:: header"></header>
+
+	<h1>GESTIONAR PROVEEDOR</h1>
+	
+	<p>El proveedor es el sustento de la empresa, a través del cual se pueden obtener las materias primas necesarias para las operaciones mercantiles. Asimismo, esta interacción constante permite la creación de nuevas redes, oportunidades y sinergias a favor de los intereses comerciales y en beneficio empresarial.</p>
+	<p></p>
+	<p></p>
+	<p></p>
+		
+	<img src="https://www.uia.es/wp-content/uploads/2019/05/shutterstock_547620274FILEminimizer.jpg">
+	
+	<p></p>
+	<p></p>
+	
+	<div class="container">
+
+		<div class=" col-xl-2 col-lg-3 col-md-4 col-sm-6" id="formulario">
+
+			<form method="post" class="form-inline" th:action="@{/proveedorNit}"
+				th:object="${cliente}">
+
+				<div class="form-group">
+					<label for="nit">Nit :</label> <input type="text"
+						class="form-control" name="nit" id="nit">
+
+				</div>
+				<br>
+				<button type="submit" class="btn btn-primary">Buscar</button>
+
+
+			</form>
+
+
+		</div>
+		<br>
+
+		<table class="table">
+			<thead>
+				<tr style="text-align: right;">
+					<th colspan="8"><a class="btn btn-success" th:href="@{/proveedorNuevo}">Nuevo Proveedor</a>
+					</th>
+				</tr>
+				<tr class="table1">
+					<th class="table1">#</th>
+					<th class="table1">Nit</th>
+					<th class="table1">Nombre</th>
+					<th class="table1">Direccion</th>
+					<th class="table1">Telefono</th>
+					<th class="table1" colspan="2">Operaciones</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="u:${proveedor}">
+					<td scope="row" th:text="${u.id}"></td>
+					<td th:text="${u.nit}"></td>
+					<td th:text="${u.nombre}"></td>
+					<td th:text="${u.direccion}"></td>
+					<td th:text="${u.telefono}"></td>
+					<td><a class="btn btn-danger"
+						th:href="@{/eliminarProveedor/}+${u.id}">Eliminar</a></td>
+					<td><a class="btn btn-success"
+						th:href="@{/proveedor/}+${u.id}">Acutalizar</a></td>
+
+				</tr>
+				</c:forEach>
+
+			</tbody>
+		</table>
+
+	</div>
+</body>
+</html>

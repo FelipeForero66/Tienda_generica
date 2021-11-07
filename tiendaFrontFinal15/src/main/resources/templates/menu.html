@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/template:: head">
+<meta charset="UTF-8">
+</head>
+<script type="text/javascript">
+	$(window).on("load", function() {
+
+		var idSesion = $("#idSesion").text();
+		localStorage.setItem("id", idSesion);
+		localStorage.getItem('id');
+
+		console.log("---->" + idSesion);
+
+	});
+</script>
+
+<body>
+	<header th:replace="plantilla/template:: header"></header>
+
+		<div th:if="${usuarioIngreso !=null}" id="idSesion"
+		th:text="${usuarioIngreso.id}"></div>
+	<div th:unless="${usuarioIngreso}">
+		
+	</div>
+	
+	<h1>Donde vallas nosotros te acompañaremos</h1>
+	
+<p>La historia y evolución de la maleta está relacionada con los cambios surgidos en la sociedad en los últimos 130 años.
+ La maleta ha ido progresando para adaptarse a las tendencias y necesidades de su tiempo. Por este motivo ha sido indispensable 
+ para los viajeros de todo tipo, al tiempo que refleja las cosas que valoran.</p>
+
+
+<img src="https://www.ecured.cu/images/8/81/Tipos_de_maletas.jpg">
+</body>
+</html>

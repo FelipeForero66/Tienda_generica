@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/template:: head">
+<link rel="stylesheet" href="assets/css/css.css">
+<head>
+<meta charset="ISO-8859-1">
+<title>Reportes</title>
+</head>
+<body>
+<header th:replace="plantilla/template:: header"></header>
+<h1>REPORTES</h1>
+
+<table class="table">
+<tr>
+	<td><a  th:href="@{/ReporteUsuario}" class="btn btn-success">Usuario</td>
+</tr>
+<tr>
+	<td> <a th:href="@{/ReporteCliente}" class="btn btn-success">Clientes</td>
+</tr>
+<tr>
+	<td> <a th:href="@{/ReporteVenta}" class="btn btn-success">Ventas</td>
+</tr>
+</table>
+
+</body>
+</html>

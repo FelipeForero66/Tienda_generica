@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/template:: head"></head>
+<meta charset="UTF-8">
+<body>
+	<header th:replace="plantilla/template:: header"></header>
+
+	<h1>GESTION CLIENTES</h1>
+	
+	<p>Los quienes marcan la pauta, cubrir sus necesidades reales y deseos nos llevará a tener éxito en el negocio que estemos implementando. Brindar experiencias positivas a los consumidores nos traerá la lealtad del cliente y con ello mayores ganancias.</p>
+
+	<p></p>
+	<p></p>
+	<p></p>
+	<img src="https://treebes.com/wp-content/uploads/2016/03/clientes-1200x565.jpg">
+	<p></p>
+	<p></p>
+	<p></p>
+	<div class="container">
+
+		<div class=" col-xl-2 col-lg-3 col-md-4 col-sm-6" id="formulario">
+
+			<form method="post"  th:action="@{/clienteDocumento}" th:object="${cliente}">
+
+				<div class="form-group">
+					<label for="Usuario">Numero Documento:</label> <input type="text"
+						class="form-control" name="numeroDocumento" id="numeroDocumento">
+
+				</div>
+				<br>
+				<button type="submit" class="btn btn-primary">Buscar</button>
+				
+				
+			</form>
+			
+			
+		</div>
+		<br>
+			<table class="table">
+				<thead>
+					<tr style="text-align: right;">
+						<th colspan="9"><a class="btn btn-success"  th:href="@{/clienteNuevo}">Nuevo Cliente</a> </th>
+					</tr>
+					<tr class="table1">
+						<th class="table1">#</th>
+						<th class="table1">Tipo documento</th>
+						<th class="table1">Numero</th>
+						<th class="table1">Nombre</th>
+						<th class="table1">Direccion</th>
+						<th class="table1">Email</th>
+						<th class="table1">Telefono</th>
+						<th class="table1" colspan="2">Operaciones</th>
+
+					</tr>
+					
+				</thead>
+				<tbody>
+					<tr th:each="u:${clientes}">
+						<td scope="row" th:text="${u.id}"></td>
+						<td th:text="${u.idTipoDocumento.tipo}"></td>
+						<td th:text="${u.numeroDocumento}"></td>
+						<td th:text="${u.nombre}"></td>
+						<td th:text="${u.direccion}"></td>
+						<td th:text="${u.email}"></td>
+						<td th:text="${u.telefono}"></td>
+						<td><a class="btn btn-danger"th:href="@{/eliminarCliente/}+${u.id}">Eliminar</a></td>
+						<td><a class="btn btn-success" th:href="@{/cliente/}+${u.id}">Acutalizar</a></td>
+						
+					</tr>
+					
+				</tbody>
+			</table>
+
+
+	</div>
+
+</body>
+</html>
