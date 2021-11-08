@@ -64,22 +64,23 @@ public class ControladorProducto {
 				List<Producto> producto = csvToBean.parse();
 				Producto c = new Producto();
 				for (int i = 0; i < producto.size(); i++) {
-					
+
 					String nombre = producto.get(i).getNombre();
 					double precioCompra = producto.get(i).getPrecioCompra();
 					Long id = (long) producto.get(i).getIdProveedor();
 					double iva = producto.get(i).getIvaCompra();
 					double precioVenta = producto.get(i).getPrecioVenta();
-					
+
 					c.setIdProveedor(id);
 					c.setIvaCompra(iva);
 					c.setPrecioCompra(precioCompra);
 					c.setNombre(nombre);
 					c.setPrecioVenta(precioVenta);
-					
-					iproducto.Productos(c);
-					
+
 				}
+					iproducto.Productos(c);
+
+
 
 				model.addAttribute("producto", producto);
 				model.addAttribute("status", true);
@@ -89,12 +90,12 @@ public class ControladorProducto {
 				model.addAttribute("status", false);
 			}
 		}
-		
+
 		model.addAttribute("productos", iproducto.getProductos());
 
 		return ("producto");
 	}
-	
+
 	@GetMapping("/eliminarProducto/{id}")
 	public String eliminarProducto(Model model, @PathVariable(name = "id") Long id) {
 		iproducto.borrarProducto(id);

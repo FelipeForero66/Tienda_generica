@@ -6,7 +6,7 @@
 <body>
 	<header th:replace="plantilla/template:: header"></header>
 
-	<h1 id="titulo">GESTION USUARIOS</h1>
+	<h1 id="titulo">GESTIÓN DE USUARIOS</h1>
 
 	<div class="container">
 	
@@ -15,7 +15,7 @@
 		<div class=" col-xl-2 col-lg-3 col-md-4 col-sm-6" id="formulario">
 			<form method="post" th:action="@{/usuario}" th:object="${usuario}">
 				<div class="form-group">
-					<label>tipo Documento :</label> <select name="idTipoDocumento"
+					<label>Tipo Documento :</label> <select name="idTipoDocumento"
 						class="form-select">
 						<option value="">Seleccionar</option>
 						<option th:each="tdo:${tipoDocumento}" th:value="${tdo.id}"
@@ -30,12 +30,12 @@
 				<div class="form-group">
 					<input type="hidden" name="id" th:value="${usuarioEditar.id}">
 
-					<label for="numero"> numero:</label><input type="text"
+					<label for="numero"> Numero:</label><input type="text"
 						name="numeroDocumento" id="numero"
 						th:value="${usuarioEditar.numeroDocumento}" class="form-control" />
 				</div>
 				<div class="form-group">
-					<label>nombre:</label><input type="text" name="nombre"
+					<label>Nombre:</label><input type="text" name="nombre"
 						class="form-control" th:value="${usuarioEditar.nombre}" />
 				</div>
 				<div class="form-group">
@@ -43,12 +43,12 @@
 						class="form-control" th:value="${usuarioEditar.email}" />
 				</div>
 				<div class="form-group">
-					<label> nombre usuario:</label> <input type="text"
+					<label> Nombre usuario:</label> <input type="text"
 						name="nombreUsuario" class="form-control"
 						th:value="${usuarioEditar.nombreUsuario}" />
 				</div>
 				<div class="form-group">
-					<label>password:</label> <input type="password" name="password"
+					<label>Password:</label> <input type="password" name="password"
 						class="form-control" th:value="${usuarioEditar.password}" />
 				</div>
 
