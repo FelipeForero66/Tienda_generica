@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.mintic</groupId>
-	<artifactId>BackTienda2</artifactId>
+	<artifactId>BackTienda3</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>tienda</name>

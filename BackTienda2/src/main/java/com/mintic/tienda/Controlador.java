@@ -55,26 +55,18 @@ public class Controlador {
 	/*
 	 * @CrossOrigin indica desde que sitios se van a realizar peticiones
 	 */
-	@CrossOrigin(origins = "http://localhost:8080")
-	@PostMapping("/loginclient") // ruta del servicio desde el front deben direccionar a esta ruta
-	public int login(@RequestBody LoginDto usuario) {
+	
+	
+	@CrossOrigin(origins = "http://127.0.0.1:5500")
+	@PostMapping("/loginNuevoFront") // ruta del servicio desde el front deben direccionar a esta ruta
+	public int loginNuevoFront(@RequestBody LoginDto usuario) {
 		
 		int responseLogin = iUsuario.login(usuario);
 		return responseLogin;
 
 	}
 	
-	@CrossOrigin(origins = "http://localhost:8080")
-	@PostMapping("/loginusuario") // ruta del servicio desde el front deben direccionar a esta ruta
-	public Usuario loginusuario(@RequestBody LoginDto usuario) {
-
-		Usuario responseLogin = iUsuario.loginUsuario(usuario);
-
-		//System.out.println(getJWTToken(usuario.getNombreUsuario()));
-		
-		return responseLogin;
-
-	}
+	
 	
 	
 	/*private String getJWTToken(String username) {
@@ -98,12 +90,6 @@ public class Controlador {
 		return "Bearer " + token;
 	}*/
 	
-	
-	
-	
-	
-	
-	
 
 	@PostMapping("/login") // ruta del servicio desde el front deben direccionar a esta ruta
 	public ResponseEntity<?> loginCliente(@RequestBody LoginDto usuario) {
@@ -117,26 +103,57 @@ public class Controlador {
 		return iUsuario.nuevoUsuario(usuarioDto);
 	}
 	
+	@CrossOrigin(origins = "http://127.0.0.1:5500")
+	@PostMapping("/NuevoUsuarioNuevoFront")
+	public Usuario NuevoUsuarioNuevoFront(@RequestBody UsuarioDto usuarioDto) {
+
+		return iUsuario.nuevoUsuario(usuarioDto);
+	}
+	
 	@PostMapping("/buscarUsuario")
 	public Usuario buscarUsuario(@RequestBody UsuarioDto usuarioDto) {
 		
 		return iUsuario.buscarUsuarioPorNumero(usuarioDto);
 	}
 	
-	@CrossOrigin(origins = "http://localhost:8080")
-	@GetMapping("/usuarios")
-	public List<Usuario> listarUsuarios() {
+	@CrossOrigin(origins = "http://127.0.0.1:5500")
+	@PostMapping("/buscarUsuarioNuevoFront")
+	public Usuario buscarUsuarioNuevoFront(@RequestBody UsuarioDto usuarioDto) {
+		
+		return iUsuario.buscarUsuarioPorNumero(usuarioDto);
+	}
+	
+	
+	
+	@CrossOrigin(origins = "http://127.0.0.1:5500")
+	@GetMapping("/usuariosNuevoFront")
+	public List<Usuario> listarUsuariosNuevoFront() {
 
 		return iUsuario.getUsuarios();
 	}
+	
+	
 
 	@GetMapping("/usuarios/{id}")
 	public Usuario buscarUsuarioId(@PathVariable Long id) {
 		return iUsuario.buscarUsuario(id);
 	}
+	
+	@CrossOrigin(origins = "http://127.0.0.1:5500")
+	@GetMapping("/usuariosNuevoFront/{id}")
+	public Usuario buscarUsuarioIdNuevoFront(@PathVariable Long id) {
+		return iUsuario.buscarUsuario(id);
+	}
 
 	@DeleteMapping("/usuarios/{id}")
 	public int eliminarUsuario(@PathVariable Long id) {
+
+		return iUsuario.borrarUsuario(id);
+	}
+	
+	@CrossOrigin(origins = "http://127.0.0.1:5500")
+	@DeleteMapping("/usuariosNuevoFront/{id}")
+	public int eliminarUsuarioNuevoFront(@PathVariable Long id) {
 
 		return iUsuario.borrarUsuario(id);
 	}

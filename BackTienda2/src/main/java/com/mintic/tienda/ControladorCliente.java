@@ -24,25 +24,38 @@ public class ControladorCliente {
 	
 	@Autowired
 	IClienteService iClienteService;
-
+	
+	
+	@CrossOrigin(origins = "http://127.0.0.1:5500")
 	@DeleteMapping("/cliente/{id}")
 	public void eliminarCliente(@PathVariable Long id) {
 
 		iClienteService.borrarCliente(id);
 	}
-
+	
+	@CrossOrigin(origins = "http://127.0.0.1:5500")
 	@GetMapping("/cliente/{id}")
 	public Cliente buscarClienteId(@PathVariable Long id) {
 		return iClienteService.buscarCliente(id);
 	}
+	
+	
+	@PostMapping("/cliente/documentoNuevoFront")
+	public Cliente BuscarClienteFront(@RequestBody ClienteDto clienteDto) {
+		return iClienteService.buscarClienteCedula(clienteDto);
+	}
 
-	@CrossOrigin(origins = "http://localhost:8080")
-	@GetMapping("/cliente")
+	
+	
+	@CrossOrigin(origins = "http://127.0.0.1:5500")
+	@GetMapping("/clientes")
 	public List<Cliente> listarCliente() {
 
 		return iClienteService.clientes();
 	}
-
+	
+	
+	@CrossOrigin(origins = "http://127.0.0.1:5500")
 	@PostMapping("/cliente")
 	public Cliente cliente(@RequestBody ClienteDto clienteDto) {
 
@@ -51,6 +64,13 @@ public class ControladorCliente {
 
 	@PostMapping("/cliente/documento")
 	public Cliente buscarDocumento(@RequestBody ClienteDto clienteDto) {
+
+		return iClienteService.buscarClienteCedula(clienteDto);
+	}
+	
+
+	@PostMapping("/clienteNuevoFront/documento")
+	public Cliente clienteNuevoFront(@RequestBody ClienteDto clienteDto) {
 
 		return iClienteService.buscarClienteCedula(clienteDto);
 	}

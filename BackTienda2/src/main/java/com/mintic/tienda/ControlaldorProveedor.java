@@ -23,24 +23,27 @@ public class ControlaldorProveedor {
 	@Autowired
 	IProveedorService iProveedorService;
 
+	@CrossOrigin(origins = "http://127.0.0.1:5500")
 	@DeleteMapping("/proveedor/{id}")
 	public void eliminarCliente(@PathVariable Long id) {
 
 		iProveedorService.borrarProveedor(id);
 	}
-
+	
+	@CrossOrigin(origins = "http://127.0.0.1:5500")
 	@GetMapping("/proveedor/{id}")
 	public Proveedor buscarProveedorId(@PathVariable Long id) {
 		return iProveedorService.buscarProveedor(id);
 	}
 
-	@CrossOrigin(origins = "http://localhost:8080")
+	@CrossOrigin(origins = "http://127.0.0.1:5500")
 	@GetMapping("/proveedor")
 	public List<Proveedor> listarProveedor() {
 
 		return iProveedorService.clientes();
 	}
-
+	
+	@CrossOrigin(origins = "http://127.0.0.1:5500")
 	@PostMapping("/proveedor")
 	public Proveedor proveedor(@RequestBody ProveedorDto proveedorDto) {
 

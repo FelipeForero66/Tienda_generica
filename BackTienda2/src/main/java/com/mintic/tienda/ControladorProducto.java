@@ -25,7 +25,7 @@ public class ControladorProducto {
 	@Autowired
 	IProductoService iProductoService;
 
-	@CrossOrigin(origins = "http://localhost:8080")
+	@CrossOrigin(origins = "http://127.0.0.1:5500")
 	@GetMapping("/productos")
 	public List<Producto> productos() {
 		return iProductoService.producto();
@@ -42,6 +42,7 @@ public class ControladorProducto {
 		return iProductoService.buscarProducto(productoDto);
 	}
 
+	@CrossOrigin(origins = "http://127.0.0.1:5500")
 	@PostMapping("/producto")
 	public Producto producto(@RequestBody ProductoDto productoDto) {
 		return iProductoService.nuevoProducto(productoDto);

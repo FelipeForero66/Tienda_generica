@@ -42,6 +42,8 @@ public class ProductoIml implements IProductoService {
 		p.setPrecioVenta(productoDto.getPrecioVenta());
 
 		return iProducto.save(p);
+		
+		
 
 	}
 
