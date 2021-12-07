@@ -24,7 +24,7 @@ body{
 h1{
     display: flex;
     justify-content: center;
-    color:#e76f51;
+    color:#264653;
 }
 
 .row{
@@ -36,6 +36,8 @@ h1{
     background-color: brown;
     display: flex;
     justify-content: center;
+    margin-top: 10px;
+    border-radius: 10px;
 }
 
 #logoTienda{
@@ -64,10 +66,13 @@ h1{
 }
 
 #allContainer{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+    background-color: #ffcdb2;
+    background-image: url(https://envato-shoebox-0.imgix.net/859c/3a5b-5dcd-46b9-a622-d1affb391ab6/77_a2F0eWEgZnJ1aXRzMDEyNw.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=1400&s=d5b8292a32d6a98a8d6bbc97ad36a510);
  
 }
 
@@ -82,7 +87,10 @@ h1{
     display: flex;
     justify-content: center;
     font-size: 800px;
-    color:#2a9d8f;
+    color:#264653;
+    background-image: url(https://envato-shoebox-0.imgix.net/859c/3a5b-5dcd-46b9-a622-d1affb391ab6/77_a2F0eWEgZnJ1aXRzMDEyNw.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=1400&s=d5b8292a32d6a98a8d6bbc97ad36a510);
+
+    /* background-color: burlywood; */
 }
 
 .form-label{
@@ -101,4 +109,10 @@ h1{
     flex-wrap: wrap;
     align-items: stretch;
 }
+
+.informacionGeneral{
+    margin-top: 20px;
+    
+}
+
 

@@ -15,14 +15,16 @@
         <a class="navbar-brand" href="http://127.0.0.1:5500/Clientes.html">Clientes</a>
         <a class="navbar-brand" href="http://127.0.0.1:5500/Proveedor.html">Proveedor</a>
         <a class="navbar-brand" href="http://127.0.0.1:5500/ventas.html">Ventas</a>
-        <a class="navbar-brand" href="http://127.0.0.1:5500/index.html">Reportes</a>
+        <a class="navbar-brand" href="http://127.0.0.1:5500/Reportes.html">Reportes</a>
         <a class="navbar-brand" href="http://127.0.0.1:5500/Productos.html">Productos</a>
       </nav>
 
-    <nav class="navbar navbar-light bg-dark">
-        <span class="navbar-brand m-auto h1 text-white text-center p-8"> USUARIOS</span>
+
+    <nav  class="navbar navbar-light bg-dark">
+        <span class="navbar-brand m-auto h1 text-white text-center p-4"> USUARIO</span>
 
     </nav>
+    
 
 
     <div id="mensaje" class="alert alert-success" style="font-size: 20px; display:none;"></div>
@@ -37,13 +39,13 @@
                 <table class="table table-bordered table-hover text-center >
                     <thead style="border:3px"  >
                         <tr style="background-color:#2a9d8f" style="color:white">
-                            <td>Id</td>
-                            <td>Tipo Documento</td>
-                            <td>tipo</td>
-                            <td>Documento</td>
-                            <td>Nombre</td>
-                            <td>Direccion</td>
-                            <td>Detalles</td>
+                                <td>#ID</td>
+                                <td>Código Documento</td>
+                                <td>Tipo Documento</td>
+                                <td>No. Documento</td>
+                                <td>Nombre</td>
+                                <td>Direccion</td>
+                                <td>Detalles</td>
                             <td>Eliminar</td>
                             <td>Editar</td>
                             
@@ -56,12 +58,12 @@
             <br>
 
             <br>
-    
-            <div class="col-4 ml-auto row " style="margin-top: 20px" >
+
+            <div class="col-4 ml-auto row " style="margin-top: 50px" >
                 <div class="nl-5">
                     <div class="navbar navbar-light bg-dark">
                         <h3 class="text-white text-center p-4">USUARIOS</h3>
-                        <h5 class="text-white text-center p-4">En la parte de Tipo Documento, colocar 5 si es REGISTRO CIVIL, 6 si es CEDULA o 7 si es TARJETA IDENTIDAD : </h5>
+                        <h5 class="text-white text-center p-4">En la parte de Tipo Documento por favor solo colocar u nuero del 5 si es REGISTRO CIVIL, 6 si es CEDULA o 7 si es TARJETA IDENTIDAD : </h5>
                     </div>
                     <div class="form-group">
                         <input type="hidden" class="form-control font-italic" id="TipoDocumento" placeholder = "Valor Documento" />
@@ -87,20 +89,17 @@
                     
                     <input type="hidden" id="id" />
 
-                    <button type="button" class="btn btn-success  btn-block" id="agregar">Agregar usurio</button>
-                    <button type="button" class="btn btn-primary btn-block" id="editar" Style="display:none">Editar Usuario</button>
+                    <button type="button" class="btn btn-success  btn-block" id="agregar">Agregar Alumno</button>
+                    <button type="button" class="btn btn-primary btn-block" id="editar" Style="display:none">Editar Alimno</button>
                  </div> 
-            
             </div> 
-           
         </div>
-       
     </div>
-  
+
    
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="/Js/main.js"></script>
-   
+    <script src="./Js/main.js"></script>
+
 </body>
 </html>

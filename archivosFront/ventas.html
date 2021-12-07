@@ -17,8 +17,8 @@
         <a class="navbar-brand" href="http://127.0.0.1:5500/Clientes.html">Clientes</a>
         <a class="navbar-brand" href="http://127.0.0.1:5500/Proveedor.html">Proveedor</a>
         <a class="navbar-brand" href="http://127.0.0.1:5500/ventas.html">Ventas</a>
-        <a class="navbar-brand" href="http://127.0.0.1:5500/index.html">Reportes</a>
-        <a class="navbar-brand" href="http://127.0.0.1:5500/index.html">Productos</a>
+        <a class="navbar-brand" href="http://127.0.0.1:5500/Reportes.html">Reportes</a>
+        <a class="navbar-brand" href="http://127.0.0.1:5500/Productos.html">Productos</a>
       </nav>
     <div class="container">
         <div  id="cajones" >
@@ -30,8 +30,8 @@
              <div class="col-4 ml-auto row " style="margin-top: 50px" >
                  <div class="nl-5">
                      <div class="navbar navbar-light bg-dark">
-                         <h3 class="text-white text-center p-4">USUARIOS</h3>
-                         <h5 class="text-white text-center p-4">En la parte de Tipo Documento por favor solo colocar u nuero del 5 si es REGISTRO CIVIL, 6 si es CEDULA o 7 si es TARJETA IDENTIDAD : </h5>
+                         <h4 class="text-white text-center p-4">USUARIOS</h4>
+                         <h5 class="text-white text-center p-4">Datos Solicitados </h5>
                      </div>
                     
                      <div class="form-group">
@@ -49,28 +49,39 @@
                      <input type="hidden" id="id" />
                     
                      <button type="button" class="btn btn-primary btn-block" id="editar" Style="display:none">Editar Alimno</button>
+
+                     <input type="hidden" class="form-control font-italic" id="IdCliente" placeholder = "Numero Documento" />
+                     <input type="hidden" class="form-control font-italic" id="IdUsuario" placeholder = "Numero Documento" />
                   </div> 
              </div> 
-
+             <br>
+ 
+             <br>
              <div class="col-8- mt 5" >  
+                 <br>
+ 
+             <br>
                 <table class="table table-bordered table-hover text-center style="border:3px">
                     <thead style="border:3px"  >
                         <tr style="background-color:black" style="color:white">
                             <td>#ID</td>
                             <td>Tipo Documento</td>
-                            <td>Documento</td>
+                            <td>tipo</td>
                             <td>Documento</td>
                             <td>Nombre</td>
-                            <td>Usuario</td>
+                            <td>direccion</td>
                             <td>Detalles</td>
                             <td>Eliminar</td>
+                            <td>Editar</td>
                             
                         </tr>
                     </thead>
                          <tbody id="tbody1" style="border:3px"></tbody>
 
                 </table>    
-                
+                <br>
+ 
+                <br>
                 <table class="table table-bordered table-hover text-center style="border:3px">
                     <thead style="border:3px"  >
                         <tr style="background-color:black" style="color:white">
@@ -85,17 +96,149 @@
                             
                         </tr>
                     </thead>
-                         <tbody id="tbody1" style="border:3px"></tbody>
+                         <tbody id="tbody2" style="border:3px"></tbody>
 
                 </table>    x
             </div>
          </div>
      </div>
 
+     <br>
+     <br>
+     <div style="background-color: darkred;" >
+        <br>
+        <div>
+            <div  style="margin-left: 100px;" >
+               <div class="nl-5" style="display: flex;" >
+                   <br>
+                   <br>
+                  <div style="display: flex;" style="flex-direction: row;">
+                  
+                   <div class="form-group" style="display: flex;" style="flex-direction: row;" style="margin-right: 30px;">
+                       
+                       <input type="text" style="width: 100px;" class="form-control font-italic" id="numeroIdProducto1" placeholder = "numero Id Producto" />
+                       <input type="text" style="width: 150px;" class="form-control font-italic" id="nombre1" placeholder = "Nombre" />
+                       <input type="text" style="width: 100px;" class="form-control font-italic" id="valorCompra1" placeholder = "valorCompra" />
+                       <input type="text" style="width: 100px;" class="form-control font-italic" id="iva1" placeholder = "Iva" />
+                       <input type="text" style="width: 100px;" class="form-control font-italic" id="total1" placeholder = "Total" />
+                       <button type="button" style="width: 100px;" class="btn btn-success  btn-block" id="producto1">Producto 1</button>   
+                       <p>Numero de Articulos</p>
+                       <input type="text" style="width: 100px;" class="form-control font-italic" id="numeroArticulos" placeholder = "Numero De Articulos" />
+                       <input type="text" style="width: 100px;" class="form-control font-italic" id="totalArticulos" placeholder = "Total Articulos" />
+                       <br>
+                       <button type="button" style="width: 100px;" class="btn btn-success  btn-block" id="totalProducto1">total 1</button> 
+                        
+                    </div>
+       
+                      
+                   </div>
+       
+                  
+                   </div>
+               </div> 
+           </div>
+           <br>
+           <br>
+           <div>
+               <div  style="margin-left: 100px;" >
+                  <div class="nl-5" style="display: flex;" >
+                      <br>
+                     
+                     <div style="display: flex;" style="flex-direction: row;">
+                     
+                      <div class="form-group" style="display: flex;" style="flex-direction: row;" style="margin-right: 30px;">
+                          
+                        <input type="text" style="width: 100px;" class="form-control font-italic" id="numeroIdProducto2" placeholder = "numero Id Producto" />
+                        <input type="text" style="width: 150px;" class="form-control font-italic" id="nombre2" placeholder = "Nombre" />
+                        <input type="text" style="width: 100px;" class="form-control font-italic" id="valorCompra2" placeholder = "valorCompra" />
+                        <input type="text" style="width: 100px;" class="form-control font-italic" id="iva2" placeholder = "Iva" />
+                        <input type="text" style="width: 100px;" class="form-control font-italic" id="total2" placeholder = "Total" />
+                        <button type="button" style="width: 100px;" class="btn btn-success  btn-block" id="producto2">Producto 2</button>    
+                        <p>Numero de Articulos</p>
+                        <input type="text" style="width: 100px;" class="form-control font-italic" id="numeroArticulos1" placeholder = "Numero De Articulos" />
+                       <input type="text" style="width: 100px;" class="form-control font-italic" id="totalArticulos1" placeholder = "Total Articulos" />
+                        <br>
+                          
+                       <button type="button" style="width: 100px;" class="btn btn-success  btn-block" id="totalProducto2">total 2</button> 
+                       </div>
+          
+                         
+                      </div>
+          
+                     
+                      </div>
+                  </div> 
+              </div>
+              <br>
+              <br>
+              <div >
+             <br>
+             <br>
+             
+                
+                <div  style="margin-left: 100px;" >
+                    <div class="nl-5" style="display: flex;" >
+                        <br>
+                       <div style="display: flex;" style="flex-direction: row;">
+                       
+                          <div class="form-group" style="display: flex;" style="flex-direction: row;" style="margin-right: 30px;">
+                            
+                              <input type="text" style="width: 100px;" class="form-control font-italic" id="numeroIdProducto3" placeholder = "numero Id Producto" />
+                              <input type="text" style="width: 150px;" class="form-control font-italic" id="nombre3" placeholder = "Nombre" />
+                              <input type="text" style="width: 100px;" class="form-control font-italic" id="valorCompra3" placeholder = "valorCompra" />
+                              <input type="text" style="width: 100px;" class="form-control font-italic" id="iva3" placeholder = "Iva" />
+                              <input type="text" style="width: 100px;" class="form-control font-italic" id="total3" placeholder = "Total" />
+                              <button type="button" style="width: 100px;" class="btn btn-success  btn-block" id="producto3">Producto 3</button>    
+                              <p>Numero de Articulos</p>
+                              <input type="text" style="width: 100px;" class="form-control font-italic" id="numeroArticulos3" placeholder = "Numero De Articulos" />
+                             <input type="text" style="width: 100px;" class="form-control font-italic" id="totalArticulos2" placeholder = "Total Articulos" />
+                              <br>
+                                
+                             <button type="button" style="width: 100px;" class="btn btn-success  btn-block" id="totalProducto3">total 3</button> 
+                             </div>
+            
+                           
+                        </div>
+            
+                       
+                        </div>
+                    </div> 
+                </div>
+          
+     </div>
+    <br>
+    <br>
+     <div  style="margin-left: 200px;" >
+        <div class="nl-5" style="display: flex;" >
+            <br>
+           <div style="display: flex;" style="flex-direction: row;">
+           
+              <div class="form-group" style="display: flex;" style="flex-direction: row;" style="margin-right: 30px;">
+                
+                 
+                  <input type="text" style="width: 150px;" class="form-control font-italic" id="idCliente" placeholder = "id Cliente" />
+                  <input type="text" style="width: 100px;" class="form-control font-italic" id="idUsuario" placeholder = "id Usuario" />
+                  <input type="text" style="width: 100px;" class="form-control font-italic" id="ivaVenta" placeholder = "iva Venta" />
+                  <input type="text" style="width: 100px;" class="form-control font-italic" id="valorVenta" placeholder = "valor Venta" />
+                  <input type="text" style="width: 100px;" class="form-control font-italic" id="totalVenta" placeholder = "total Venta" />
+                  <button type="button" style="width: 100px;" class="btn btn-success  btn-block" id="totalSumas">Total Ventas</button>    
+                  
+                  
+                 </div>
 
+               
+            </div>
 
+           
+            </div>
+        </div> 
 
+        <br>
+
+        <div style="display: flex;" style="justify-content: center;" >
+            <button  style="margin-left: 500px;"" type="button" style="width: 100px;" class="btn btn-success  btn-block" id="realizarVentas">Realizar Venta</button> 
+        </div>
      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-     <script src="/Js/mainVenta.js"></script>
+     <script src="./Js/mainVenta.js"></script>
 </body>
 </html>

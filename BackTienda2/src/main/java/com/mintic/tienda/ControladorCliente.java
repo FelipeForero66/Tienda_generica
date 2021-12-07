@@ -39,7 +39,7 @@ public class ControladorCliente {
 		return iClienteService.buscarCliente(id);
 	}
 	
-	
+	@CrossOrigin(origins = "http://127.0.0.1:5500")
 	@PostMapping("/cliente/documentoNuevoFront")
 	public Cliente BuscarClienteFront(@RequestBody ClienteDto clienteDto) {
 		return iClienteService.buscarClienteCedula(clienteDto);

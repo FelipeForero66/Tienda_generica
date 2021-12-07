@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda_Genérica</title>
+    <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link href="Css.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+ <script src="papaparse.min.js"></script><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        .pdfobject-container { height: 500px;}
+        .pdfobject { border: 1px solid #666; }
+      </style>
 </head>
 <body>
     <nav class="navbar navbar-light bg-light">
@@ -15,8 +20,9 @@
         <a class="navbar-brand" href="http://127.0.0.1:5500/Clientes.html">Clientes</a>
         <a class="navbar-brand" href="http://127.0.0.1:5500/Proveedor.html">Proveedor</a>
         <a class="navbar-brand" href="http://127.0.0.1:5500/ventas.html">Ventas</a>
-        <a class="navbar-brand" href="http://127.0.0.1:5500/index.html">Reportes</a>
+        <a class="navbar-brand" href="http://127.0.0.1:5500/Reportes.html">Reportes</a>
         <a class="navbar-brand" href="http://127.0.0.1:5500/Productos.html">Productos</a>
+        <a class="navbar-brand" href="http://127.0.0.1:5500/leerArchivoCSV.html">ProductosCSV</a>
       </nav>
 
     <nav class="navbar navbar-light bg-dark">
@@ -25,7 +31,7 @@
     </nav>
     
     <h1>Hola Mundo</h1>
-
+   
     <div id="mensaje" class="alert alert-success" style="font-size: 20px; display:none;"></div>
 
     <div class="row justify-content-center" Style="border:3px">
@@ -61,8 +67,8 @@
             <div class="col-4 ml-auto row " style="margin-top: 50px" >
                 <div class="nl-5">
                     <div class="navbar navbar-light bg-dark">
-                        <h3 class="text-white text-center p-4">USUARIOS</h3>
-                         <h5 class="text-white text-center p-4">En la parte de Tipo Documento, colocar 5 si es REGISTRO CIVIL, 6 si es CEDULA o 7 si es TARJETA IDENTIDAD : </h5>
+                        <h3 class="text-white text-center p-4">Productos</h3>
+                        <h5 class="text-white text-center p-4">Lista de productos : </h5>
                     </div>
                     <div class="form-group">
                         <input type="hidden" class="form-control font-italic" id="id" placeholder = "Valor Documento" />
@@ -85,17 +91,17 @@
                     
                     <input type="hidden" id="id" />
 
-                    <button type="button" class="btn btn-success  btn-block" id="agregar">Agregar Producto</button>
-                    <button type="button" class="btn btn-primary btn-block" id="editar" Style="display:none">Editar Producto</button>
+                    <button type="button" class="btn btn-success  btn-block" id="agregar">Agregar Alumno</button>
+                    <button type="button" class="btn btn-primary btn-block" id="editar" Style="display:none">Editar Alimno</button>
                  </div> 
             </div> 
         </div>
     </div>
 
-   
+    <button style="margin-left: 500px;" type="button" class="btn btn-success  btn-block" id="eliminarTodos">Eliminar Todos Los Productos</button>
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="/Js/mainProductos.js"></script>
+    <script src="./Js/mainProductos.js"></script>
 
 </body>
 </html>

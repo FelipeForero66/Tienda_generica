@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 16, 2021 at 06:20 AM
+-- Generation Time: Dec 05, 2021 at 06:32 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
 
@@ -48,7 +48,45 @@ INSERT INTO `buscarnumeros` (`id`, `numeroProducto`, `numeroCliente`, `numeroUsu
 (7, 155, '785278', 1),
 (8, 155, '2', 1),
 (9, 155, '5', 1),
-(10, 152, '7', 10);
+(10, 152, '7', 10),
+(11, 163, '7', 1),
+(12, 163, '14', 10),
+(13, 163, '1001316963', 10),
+(14, 162, '23123', 10),
+(15, 163, '14', 10),
+(16, 163, '23123', 10),
+(17, 162, '14', 10),
+(18, 163, '23123', 10),
+(19, 163, '5', 10),
+(20, 163, '5', 10),
+(21, 163, '12', 10),
+(22, 163, '7', 10),
+(23, 162, '5', 1),
+(24, 163, '14', 10),
+(25, 163, '12', 10),
+(26, 163, '1', 10),
+(27, 163, '12', 10),
+(28, 163, '12', 10),
+(29, 163, '5', 10),
+(30, 163, '5', 10),
+(31, 163, '7', 1),
+(32, 163, '5', 10),
+(33, 163, '23123', 10),
+(34, 163, '7', 10),
+(35, 162, '7', 10),
+(36, 162, '5', 10),
+(37, 162, '7', 2),
+(38, 163, '', 10),
+(39, 163, '', 10),
+(40, 163, '2', 10),
+(41, 163, '5', 10),
+(42, 163, '5', 10),
+(43, 163, '5', 10),
+(44, 165, '12', 10),
+(45, 164, '12', 10),
+(46, 163, '2', 1238),
+(47, 163, '5', 1238),
+(48, 163, '5', 2);
 
 -- --------------------------------------------------------
 
@@ -71,9 +109,7 @@ CREATE TABLE `cliente` (
 --
 
 INSERT INTO `cliente` (`id`, `idTipoDocumento`, `numeroDocumento`, `direccion`, `email`, `nombre`, `telefono`) VALUES
-(5, 6, '1001316963', 'Calle 6 A No 88 20', 'jhosetmenjura@gmail.com', 'sebas menjura', '3102681882'),
-(7, 6, '1', 'Cra 69 No 12 A 42', 'jhosetmenjura@gmail.com', 'sebas menjura', '3102681882'),
-(12, 6, '23123', 'Cra 69 No 12 A 42', 'jhosetmenjura@gmail.com', 'juan', '3102681882');
+(25, 6, '1', 'Cra 69 No 12 A 42', 'jhosetmenjura@gmail.com', 'caro', '3102681882');
 
 -- --------------------------------------------------------
 
@@ -111,9 +147,9 @@ CREATE TABLE `producto` (
 --
 
 INSERT INTO `producto` (`id`, `idProveedor`, `ivaCompra`, `nombre`, `precioCompra`, `precioVenta`) VALUES
-(162, 3, 19000, 'Maleta niño', 100000, 119000),
-(163, 4, 38000, 'Maleta Viaje', 200000, 238000),
-(164, 6, 28000, 'Maleta Empresarial', 150000, 178000);
+(243, 10, 900, 'Melon', 9000, 9900),
+(244, 10, 300, 'fresa', 3000, 3600),
+(245, 10, 600, 'Sandia', 6000, 6600);
 
 -- --------------------------------------------------------
 
@@ -135,9 +171,7 @@ CREATE TABLE `proveedor` (
 --
 
 INSERT INTO `proveedor` (`id`, `ciudad`, `direccion`, `nombre`, `telefono`, `nit`) VALUES
-(3, 'jhosetmenjura@gmail.com', 'Calle 6 A No 88 20 int 11 Apa 504', 'juan', '3102681882', '345'),
-(4, 'jhosetmenjura@gmail.com', 'Calle 6 A No 88 20 int 11 Apa 504', 'juan', '3102681882', '1'),
-(6, 'jhosetmenjura@gmail.com', 'Calle 6 A No 88 20', 'Jhoset', '2345789', '4');
+(10, 'Bogota', 'Calle 6 A No 88 20', 'juan', '3102681882', '1235689');
 
 -- --------------------------------------------------------
 
@@ -180,9 +214,8 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id`, `idTipoDocumento`, `numeroDocumento`, `email`, `nombre`, `password`, `nombreUsuario`) VALUES
-(1, 6, '1', 'jhosetmenjura@gmail.com', 'Jhoset', '123', 'df'),
-(2, 5, '123123', 'armando@', 'juan', '123', 'IanSeAH'),
-(10, 6, '1238', 'sebas@gmail.com', 'sebas', '123', 'jhoset96');
+(1, 5, '75278527', 'Fres85@hotmail', 'Camila Fresneda', '123', 'df'),
+(29, 5, '1', 'sebas@gmail.com', 'sebas menjura', '123', 'juan99');
 
 -- --------------------------------------------------------
 
@@ -204,13 +237,7 @@ CREATE TABLE `venta` (
 --
 
 INSERT INTO `venta` (`id`, `idCliente`, `idUsuario`, `ivaVenta`, `totalVenta`, `valorVenta`) VALUES
-(1, 7, 1, 19000, 100000, 119000),
-(2, 5, 1, 38000, 200000, 238000),
-(3, 7, 1, 25000, 150000, 125000),
-(4, 5, 1, 19000, 200000, 125000),
-(5, 5, 1, 9000, 89000, 80000),
-(6, 5, 1, 9000, 89000, 80000),
-(7, 7, 10, 9000, 89000, 80000);
+(26, 25, 29, 1800, 201000, 18000);
 
 --
 -- Indexes for dumped tables
@@ -234,7 +261,8 @@ ALTER TABLE `cliente`
 --
 ALTER TABLE `detalleventa`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `FK_PRODUCTO_DETALLE` (`idProducto`);
+  ADD KEY `FK_PRODUCTO_DETALLE` (`idProducto`),
+  ADD KEY `detalle_venta_ibfk_1` (`idVenta`);
 
 --
 -- Indexes for table `producto`
@@ -278,13 +306,13 @@ ALTER TABLE `venta`
 -- AUTO_INCREMENT for table `buscarnumeros`
 --
 ALTER TABLE `buscarnumeros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `detalleventa`
@@ -296,13 +324,13 @@ ALTER TABLE `detalleventa`
 -- AUTO_INCREMENT for table `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=165;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=248;
 
 --
 -- AUTO_INCREMENT for table `proveedor`
 --
 ALTER TABLE `proveedor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `tipodocumento`
@@ -314,13 +342,13 @@ ALTER TABLE `tipodocumento`
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `venta`
 --
 ALTER TABLE `venta`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- Constraints for dumped tables

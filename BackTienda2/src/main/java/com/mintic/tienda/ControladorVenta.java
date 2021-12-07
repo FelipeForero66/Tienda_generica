@@ -31,7 +31,7 @@ public class ControladorVenta {
 	@Autowired
 	IVentaService iVenteService;
 	
-	
+	@CrossOrigin(origins = "http://127.0.0.1:5500")
 	@GetMapping("/reporteVenta")
 	public List<VentaCliente>reporteVenta(){
 		
@@ -49,22 +49,24 @@ public class ControladorVenta {
 
 	}
 	
-	
+	@CrossOrigin(origins = "http://127.0.0.1:5500")
 	@GetMapping("/buscarnumeros/{id}")
 	public BuscarNumeros buscarNumero(@PathVariable Long id) {
 		//return iClienteService.buscarCliente(id);
 		return iVenteService.buscarNumerosId(id);
 	}
 	
-	@CrossOrigin(origins = "http://localhost:8080")
+	@CrossOrigin(origins = "http://127.0.0.1:5500")
 	@GetMapping("/listarNumeros")
 	public List<BuscarNumeros> listarNumeros() {
 
 		return iVenteService.getListaNumeros();
 	}
 	
+	@CrossOrigin(origins = "http://127.0.0.1:5500")
 	@PostMapping("/nuevaVenta")
 	public Venta nuevaVenta(@RequestBody VentaDto ventaDto) {
+		System.out.println(ventaDto.getId());
 		return iVenteService.nuevaVenta(ventaDto);
 
 	}

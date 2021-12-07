@@ -103,13 +103,14 @@ public class Controlador {
 		return iUsuario.nuevoUsuario(usuarioDto);
 	}
 	
+	
 	@CrossOrigin(origins = "http://127.0.0.1:5500")
 	@PostMapping("/NuevoUsuarioNuevoFront")
 	public Usuario NuevoUsuarioNuevoFront(@RequestBody UsuarioDto usuarioDto) {
 
 		return iUsuario.nuevoUsuario(usuarioDto);
 	}
-	
+	@CrossOrigin(origins = "http://127.0.0.1:5500")
 	@PostMapping("/buscarUsuario")
 	public Usuario buscarUsuario(@RequestBody UsuarioDto usuarioDto) {
 		

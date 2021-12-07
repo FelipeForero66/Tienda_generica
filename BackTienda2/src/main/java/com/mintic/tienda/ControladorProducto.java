@@ -31,12 +31,13 @@ public class ControladorProducto {
 		return iProductoService.producto();
 	}
 	
-	
+	@CrossOrigin(origins = "http://127.0.0.1:5500")
 	@GetMapping("/productoId/{id}")
 	public Producto buscarProductoId(@PathVariable Long id) {
 		return iProductoService.buscarProductoId(id);
 	}
-
+	
+	@CrossOrigin(origins = "http://127.0.0.1:5500")
 	@PostMapping("/productos")
 	public Producto productoId(@RequestBody ProductoDto productoDto) {
 		return iProductoService.buscarProducto(productoDto);
@@ -48,14 +49,16 @@ public class ControladorProducto {
 		return iProductoService.nuevoProducto(productoDto);
 
 	}
-
+	
+	@CrossOrigin(origins = "http://127.0.0.1:5500")
 	@DeleteMapping("/producto/{id}")
 	public void eliminarProducto(@PathVariable Long id) {
 
 		iProductoService.eliminarProductoId(id);
 	}
-
-	@DeleteMapping("/producto")
+	
+	@CrossOrigin(origins = "http://127.0.0.1:5500")
+	@DeleteMapping("/productos")
 	public void eliminarProductos() {
 
 		iProductoService.elminarProductos();
