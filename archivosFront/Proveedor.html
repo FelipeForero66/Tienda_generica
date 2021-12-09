@@ -4,27 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tienda_Genérica</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <link href="Css.css" rel="stylesheet">
+    <link href="./Style/Css.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
-    <nav class="navbar navbar-light bg-light">
+      <nav class="navbar navbar-light bg-light">
+ <button  type="button" class="botonUsuario">
         <a class="navbar-brand" href="http://127.0.0.1:5500/PaginaCrud.html">Usuario</a>
+</button>
+
+  <button  type="button" class="botonUsuario">
         <a class="navbar-brand" href="http://127.0.0.1:5500/Clientes.html">Clientes</a>
+</button>
+
+ <button  type="button" class="botonUsuario">
         <a class="navbar-brand" href="http://127.0.0.1:5500/Proveedor.html">Proveedor</a>
-        <a class="navbar-brand" href="http://127.0.0.1:5500/ventas.html">Ventas</a>
-        <a class="navbar-brand" href="http://127.0.0.1:5500/Reportes.html">Reportes</a>
-        <a class="navbar-brand" href="http://127.0.0.1:5500/Productos.html">Productos</a>
+</button>
+
+ <button  type="button" class="botonUsuario">
+      <a class="navbar-brand" href="http://127.0.0.1:5500/ventas.html">Ventas</a>
+</button>
+
+ <button  type="button" class="botonUsuario">
+    <a class="navbar-brand" href="http://127.0.0.1:5500/Reportes.html">Reportes</a>
+</button>
+
+ <button  type="button" class="botonUsuario">
+     <a class="navbar-brand" href="http://127.0.0.1:5500/Productos.html">Productos</a>
+</button>
+      
+            
       </nav>
+ 
 
     <nav class="navbar navbar-light bg-dark">
-        <span class="navbar-brand m-auto h1 text-white text-center p-4"> CONSUMIR API REST</span>
+        <span class="navbar-brand m-auto h1 text-white text-center p-4"> PROVEEDORES</span>
 
     </nav>
-    
-    <h1>Hola Mundo</h1>
 
     <div id="mensaje" class="alert alert-success" style="font-size: 20px; display:none;"></div>
 
@@ -37,13 +55,13 @@
            <div class="col-8- mt 5" >  
                 <table class="table table-bordered table-hover text-center >
                     <thead style="border:3px"  >
-                        <tr style="background-color:black" style="color:white">
-                            <td>#ID</td>
-                            <td>Tipo Documento</td>
+                         <tr style="background-color:#2a9d8f" style="color:white">
+                            <td>#Id</td>
+                            <td>Ciudad</td>
                             <td>Direccion</td>
-                            <td>Documento</td>
+                            <td>Teléfono</td>
                             <td>Nombre</td>
-                            <td>direccion</td>
+                            <td>NIT</td>
                             <td>Detalles</td>
                             <td>Eliminar</td>
                             <td>Editar</td>
@@ -54,17 +72,13 @@
 
                 </table>       
             </div>
-            <br>
-
-            <br>
-
             <div class="col-4 ml-auto row " style="margin-top: 50px" >
                 <div class="nl-5">
                     <div class="navbar navbar-light bg-dark">
                         <h3 class="text-white text-center p-4">PROVEEDORES</h3>
                         <br>
                         <br>
-                        <h5 class="text-white text-center p-4">Datos de proveedores: </h5>
+                        <h5 class="text-white text-center p-4">Información proveedores: </h5>
                     </div>
                     <div class="form-group">
                         <input type="hidden" class="form-control font-italic" id="id" placeholder = "id" />
@@ -87,8 +101,8 @@
                     
                     <input type="hidden" id="id" />
 
-                    <button type="button" class="btn btn-success  btn-block" id="agregar">Agregar Alumno</button>
-                    <button type="button" class="btn btn-primary btn-block" id="editar" Style="display:none">Editar Alimno</button>
+                    <button type="button" class="btn btn-success  btn-block" id="agregar">Agregar Provedor</button>
+                    <button type="button" class="btn btn-primary btn-block" id="editar" Style="display:none">Editar Proveedor</button>
                  </div> 
             </div> 
         </div>

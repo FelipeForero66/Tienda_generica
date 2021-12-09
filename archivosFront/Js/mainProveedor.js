@@ -1,5 +1,5 @@
 $(document).ready(()=>{
-    alert('Sludos desde main.js con JS6');
+    /* alert('Sludos desde main.js con JS6'); */
 
     
 
@@ -65,11 +65,11 @@ $(document).ready(()=>{
                 data: JSON.stringify(datosAlumnos),
                 dataType: 'json',
                 success: (data) => {
-                    $('#mensaje').html('Exito al crear el alumno').css('display', 'block');
+                    $('#mensaje').html('Exito al crear el proveedor').css('display', 'block');
                     list();
                     reset();
 
-                    alert("Alumno registrado");
+                    alert("Proveedor registrado");
                 }
             })
         })
@@ -123,7 +123,7 @@ $(document).ready(()=>{
 
         $(document).on('click','#btn-delete', function(){
 
-            if(confirm('Esta seguro que desea aliminar ?')){
+            if(confirm('Esta seguro que desea eliminar el proveedor ?')){
                 let btnDelte = $(this)[0].parentElement.parentElement;
                 let id = $(btnDelte).attr('alumnoId');
                 console.log(id);
@@ -135,13 +135,16 @@ $(document).ready(()=>{
                     success:(res) =>{
                        
     
-                        $('#mensaje').html('Usuario Elimnado').css('display', 'block');
+                        $('#mensaje').html('Proveedor Elimnado').css('display', 'block');
                         list();
                     }
-                })     
+                }) 
             }
+            location.reload(); 
         })
+       
     }
+    
 
     const TraerAlumno = () =>{
         $(document).on('click','#btn-edit', function(){
@@ -192,7 +195,7 @@ $(document).ready(()=>{
                 data: JSON.stringify(datosAlumnos),
                 dataType: 'json',
                 success: (res) => {
-                    $('#mensaje').html('Alumno Modificado').css('display', 'block');
+                    $('#mensaje').html('Proveedor Modificado').css('display', 'block');
                     $('#editar').css('display', 'none');
                     $('#agregar').css('display', 'block');
 

@@ -115,4 +115,34 @@ h1{
     
 }
 
+#cajonesUsuarios {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    flex-wrap: unset;
+    align-items: baseline;
+    align-content: stretch;
+} 
 
+.bigContainer{
+   width: 100%;
+   height: 100%;
+    background-repeat: no-repeat;
+  /*   justify-content: center; */
+    background-image: url(https://media.istockphoto.com/photos/healthy-eating-background-food-photography-different-fruits-and-picture-id515593512);
+}
+
+.botonUsuario{
+    background-color:#e9c46a;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    color:cyan;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #198754;
+    border-color: #198754;
+    width: inherit;
+}

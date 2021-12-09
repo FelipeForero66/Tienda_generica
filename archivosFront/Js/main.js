@@ -1,5 +1,5 @@
 $(document).ready(()=>{
-    alert('Sludos desde main.js con JS6');
+    /* alert('Sludos desde main.js con JS6'); */
 
     
 
@@ -99,11 +99,11 @@ $(document).ready(()=>{
                 data: JSON.stringify(datosAlumnos),
                 dataType: 'json',
                 success: (data) => {
-                    $('#mensaje').html('Exito al crear el alumno').css('display', 'block');
+                    $('#mensaje').html('Exito al crear el usuario').css('display', 'block');
                     list();
                     reset();
 
-                    alert("Alumno registrado");
+                    alert("Usuario registrado");
                 }
             })
         })
@@ -233,7 +233,7 @@ $(document).ready(()=>{
                 data: JSON.stringify(datosAlumnos),
                 dataType: 'json',
                 success: (res) => {
-                    $('#mensaje').html('Alumno Modificado').css('display', 'block');
+                    $('#mensaje').html('Usuario Modificado').css('display', 'block');
                     $('#editar').css('display', 'none');
                     $('#agregar').css('display', 'block');
 

@@ -1,5 +1,5 @@
 $(document).ready(()=>{
-    alert('Sludos desde main.js con JS6');
+   /*  alert('Sludos desde main.js con JS6'); */
 
     const list = () =>{
         $.ajax({
@@ -18,6 +18,8 @@ $(document).ready(()=>{
                     <td>${element.numeroDocumento}</td>
                     <td>${element.nombre}</td>
                     <td>${element.telefono}</td>
+                    <td>${element.email}</td>
+                    <td>${element.direccion}</td>
                     <td>
                     <button id="btn-details" class="btn btn-warning">Detalles</button>
                     </td>
@@ -98,7 +100,9 @@ const buscar = () =>{
             <strong>Tipo Documento </strong> : ${res.idTipoDocumento.tipo}<br>
             <strong> Documento </strong> : ${res.numeroDocumento}<br>
             <strong> Nombre </strong> : ${res.nombre}<br>
-            <strong> Usuario </strong> : ${res.telefono}<br><br>
+            <strong> Telefono </strong> : ${res.telefono}<br><br>
+            <strong> Email </strong> : ${res.email}<br>
+            <strong> Direccion </strong> : ${res.direccion}<br>
 
             <button id="btn-limpiar" class="btn btn-warning">Limpiar</button>
 
@@ -139,6 +143,8 @@ const deleteUsuario = () =>{
                 }
             })     
         }
+        location.reload(); 
+        
     })
 }
 
