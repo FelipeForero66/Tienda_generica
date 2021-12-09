@@ -35,6 +35,7 @@ public class VentaIml implements IVentaService{
 		numeros.setValorVenta(ventaDto.getValorVenta());
 		numeros.setIvaVenta(ventaDto.getIvaVenta());
 		numeros.setTotalVenta(ventaDto.getTotalVenta());
+		numeros.setSede(ventaDto.getSede());
 	
 
 		return iVenta.save(numeros);

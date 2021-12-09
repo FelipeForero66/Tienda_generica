@@ -66,6 +66,15 @@ public class Controlador {
 
 	}
 	
+	@CrossOrigin(origins = "http://127.0.0.1:5500")
+	@PostMapping("/loginSedes") // ruta del servicio desde el front deben direccionar a esta ruta
+	public Usuario loginSedes(@RequestBody LoginDto usuario) {
+		
+		Usuario responseLogin = iUsuario.loginSede(usuario);
+		return responseLogin;
+
+	}
+	
 	
 	
 	
@@ -99,7 +108,7 @@ public class Controlador {
 
 	@PostMapping("/usuarios")
 	public Usuario usuario(@RequestBody UsuarioDto usuarioDto) {
-
+		System.out.println(usuarioDto.getSede());
 		return iUsuario.nuevoUsuario(usuarioDto);
 	}
 	
@@ -107,7 +116,7 @@ public class Controlador {
 	@CrossOrigin(origins = "http://127.0.0.1:5500")
 	@PostMapping("/NuevoUsuarioNuevoFront")
 	public Usuario NuevoUsuarioNuevoFront(@RequestBody UsuarioDto usuarioDto) {
-
+		
 		return iUsuario.nuevoUsuario(usuarioDto);
 	}
 	@CrossOrigin(origins = "http://127.0.0.1:5500")

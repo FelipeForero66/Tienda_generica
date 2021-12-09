@@ -12,6 +12,16 @@ public class ProveedorDto {
 	private String telefono;
 
 	private String nit;
+	
+	private Long Sede;
+
+	public Long getSede() {
+		return Sede;
+	}
+
+	public void setSede(Long sede) {
+		Sede = sede;
+	}
 
 	public Long getId() {
 		return id;

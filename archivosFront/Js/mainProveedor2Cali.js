@@ -2,7 +2,7 @@ $(document).ready(()=>{
     alert('Sludos desde main.js con JS6');
 
     
-    const sede = 1;
+    const sede = 2;
     $('#Sede').val(sede);
     const list = () =>{
         $.ajax({
@@ -13,29 +13,29 @@ $(document).ready(()=>{
                 console.log(res);
                 let data = '';
                 res.forEach(element => {
-                    if(element.sede==1) {
+                    if(element.sede==2) {
                         data+=`
-                    <tr alumnoId = ${element.id}>
-                    <td>${element.id}</td>
-                    <td>${element.ciudad}</td>
-                    <td>${element.direccion}</td>
-                    <td>${element.telefono}</td>
-                    <td>${element.nombre}</td>
-                    <td>${element.nit}</td>
-                    <td>${element.sede}</td>
-                    <td>
-                    <button id="btn-details" class="btn btn-warning">Detalles</button>
-                    </td>
-                    <td>
-                    <button id="btn-delete" class="btn btn-danger">Eliminar</button>
-                    </td>
-                    <td>
-                    <button id="btn-edit" class="btn btn-success">Editar</button>
-                    </td>
-                    <tr/>
-                    `
+                        <tr alumnoId = ${element.id}>
+                        <td>${element.id}</td>
+                        <td>${element.ciudad}</td>
+                        <td>${element.direccion}</td>
+                        <td>${element.telefono}</td>
+                        <td>${element.nombre}</td>
+                        <td>${element.nit}</td>
+                        <td>${element.sede}</td>
+                        <td>
+                        <button id="btn-details" class="btn btn-warning">Detalles</button>
+                        </td>
+                        <td>
+                        <button id="btn-delete" class="btn btn-danger">Eliminar</button>
+                        </td>
+                        <td>
+                        <button id="btn-edit" class="btn btn-success">Editar</button>
+                        </td>
+                        <tr/>
+                        `
                     }
-                    
+                   
                 });
     
                 $('#tbody').html(data);
@@ -60,7 +60,7 @@ $(document).ready(()=>{
                 nombre: $('#nombre').val(),
                 telefono: $('#telefono').val(),
                 nit: $('#nit').val(),
-                sede: $('#Sede').val(),
+                sede: $('#Sede').val()
             }
 
             $.ajax({
@@ -147,7 +147,6 @@ $(document).ready(()=>{
                     }
                 })     
             }
-            location.reload(); 
         })
     }
 

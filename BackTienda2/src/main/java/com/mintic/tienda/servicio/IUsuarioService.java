@@ -14,6 +14,8 @@ import com.mintic.tienda.entities.Usuario;
 public interface IUsuarioService {
 
 	int login(LoginDto usuarioDto);
+	
+	Usuario loginSede(LoginDto usuarioDto);
 
 	List<Usuario> getUsuarios();
 

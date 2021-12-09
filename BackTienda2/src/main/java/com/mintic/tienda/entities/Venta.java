@@ -24,6 +24,7 @@ public class Venta {
 
 	private Long valorVenta;
 	
+	private Long Sede;
 	
 
 	public Long getIvaVenta() {
@@ -74,5 +75,17 @@ public class Venta {
 	public void setValorVenta(Long valorVenta) {
 		this.valorVenta = valorVenta;
 	}
+
+	public Long getSede() {
+		return Sede;
+	}
+
+	public void setSede(Long sede) {
+		Sede = sede;
+	}
+
+	
+	
+	
 
 }

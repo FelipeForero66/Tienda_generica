@@ -52,10 +52,31 @@ public class Usuario {
 
 	@Column(name = "email")
 	private String email;
+	
+	@Column(name = "sede")
+	private Long sede;
+
+	
+	
+
+	
+
+	public Long getSede() {
+		return sede;
+	}
+
+	public void setSede(Long sede) {
+		this.sede = sede;
+	}
+
+	public static String getTableName() {
+		return TABLE_NAME;
+	}
 
 	public Usuario() {
 
 	}
+	
 
 	public Usuario(Long id, TipoDocumento idTipoDocumento, String numeroDocumento, String nombre, String password,
 			String nombreUsuario, String email) {
@@ -123,5 +144,11 @@ public class Usuario {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
+	
+	
+	
+
+	
 
 }

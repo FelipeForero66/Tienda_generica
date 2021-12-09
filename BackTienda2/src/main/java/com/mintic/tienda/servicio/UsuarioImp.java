@@ -39,6 +39,13 @@ public class UsuarioImp implements IUsuarioService {
 		int u = iUsuario.findByNombreUsuarioAndPassword(usuarioDto.getNombreUsuario(), usuarioDto.getPassword());
 		return u;
 	}
+	
+
+	@Override
+	public Usuario loginSede(LoginDto usuarioDto) {
+		Usuario u = iUsuario.findByNameAndPassword(usuarioDto.getNombreUsuario(), usuarioDto.getPassword());
+		return u;
+	}
 
 	@Override
 	public List<Usuario> getUsuarios() {
@@ -63,6 +70,7 @@ public class UsuarioImp implements IUsuarioService {
 		usuario.setNombreUsuario(usuarioDto.getNombreUsuario());
 		usuario.setPassword(usuarioDto.getPassword());
 		usuario.setEmail(usuarioDto.getEmail());
+		usuario.setSede(usuarioDto.getSede());
 		return iUsuario.save(usuario);
 	}
 
@@ -126,5 +134,6 @@ public class UsuarioImp implements IUsuarioService {
 	public Usuario loginUsuario(LoginDto usuarioDto) {
 		return iUsuario.findByNameAndPassword(usuarioDto.getNombreUsuario(), usuarioDto.getPassword());
 	}
+
 
 }

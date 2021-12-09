@@ -30,6 +30,8 @@ public class Cliente {
 	private String nombre;
 	
 	private String telefono;
+	
+	private Long sede;
 
 	public Long getId() {
 		return id;
@@ -85,6 +87,21 @@ public class Cliente {
 
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
+	}
+
+	
+
+
+	public Long getSede() {
+		return sede;
+	}
+
+	public void setSede(Long sede) {
+		this.sede = sede;
+	}
+
+	public static String getTableName() {
+		return TABLE_NAME;
 	}
 	
 	

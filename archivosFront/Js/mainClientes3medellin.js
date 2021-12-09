@@ -1,8 +1,9 @@
 $(document).ready(()=>{
-   /*  alert('Sludos desde main.js con JS6'); */
+    alert('Sludos desde main.js con JS6');
 
     const list = () =>{
-       const sede = 1;
+        
+        const sede = 3;
         $('#Sede').val(sede);
         $.ajax({
             url:'http://localhost:8090/tiendagenerica/v1/clientes',
@@ -12,15 +13,13 @@ $(document).ready(()=>{
                 console.log(res);
                 let data = '';
                 res.forEach(element => {
-                    if(element.sede==1) {
+                    if(element.sede==3) {
                         data+=`
                         <tr alumnoId = ${element.id}>
                         <td>${element.id}</td>
                         <td>${element.idTipoDocumento.id}</td>
                         <td>${element.idTipoDocumento.tipo}</td>
                         <td>${element.numeroDocumento}</td>
-                        <td>${element.direccion}</td>
-                        <td>${element.email}</td>
                         <td>${element.nombre}</td>
                         <td>${element.telefono}</td>
                         <td>${element.sede}</td>
@@ -44,7 +43,6 @@ $(document).ready(()=>{
         })
     }
 
-
     const reset = () =>{
         $('#idTipoDocumento').val('');
         $('#numeroDocumento').val('');
@@ -64,7 +62,7 @@ const save = () =>{
             direccion: $('#direccion').val(),
             telefono: $('#telefono').val(),
             email: $('#email').val(),
-            sede: $('#sede').val()
+            sede: $('#Sede').val(),
         }
 
         $.ajax({
@@ -109,10 +107,8 @@ const buscar = () =>{
             <strong>Tipo Documento </strong> : ${res.idTipoDocumento.tipo}<br>
             <strong> Documento </strong> : ${res.numeroDocumento}<br>
             <strong> Nombre </strong> : ${res.nombre}<br>
-            <strong> Telefono </strong> : ${res.telefono}<br><br>
-            <strong> Email </strong> : ${res.email}<br>
-            <strong> Direccion </strong> : ${res.direccion}<br>
-              <strong> Sede </strong> : ${res.sede}<br>
+            <strong> Usuario </strong> : ${res.telefono}<br>
+            <strong> Sede </strong> : ${res.sede}<br><br>
 
             <button id="btn-limpiar" class="btn btn-warning">Limpiar</button>
 
@@ -153,8 +149,6 @@ const deleteUsuario = () =>{
                 }
             })     
         }
-        location.reload(); 
-        
     })
 }
 
@@ -181,7 +175,6 @@ const TraerAlumno = () =>{
                 $('#telefono').val(res.telefono);
                 $('#email').val(res.email);
                 $('#id').val(res.id);
-                $('#sede').val(res.sede);
                }
             })
         })
@@ -206,7 +199,7 @@ const TraerAlumno = () =>{
                 direccion: $('#direccion').val(),
                 telefono: $('#telefono').val(),
                 email: $('#email').val(),
-                sede: $('#sede').val()
+                sede: $('#Sede').val()
             }
             console.log(datosAlumnos.id);
             $.ajax({

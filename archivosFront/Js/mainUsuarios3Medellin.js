@@ -4,7 +4,7 @@ $(document).ready(()=>{
     
 
     const list = () =>{
-        const sede = 1;
+        const sede = 3;
         $('#Sede').val(sede);
         $.ajax({
             url:'http://localhost:8090/tiendagenerica/v1/usuariosNuevoFront',
@@ -16,7 +16,7 @@ $(document).ready(()=>{
 
                 res.forEach(element => {
 
-                    if(element.sede==1) {
+                    if(element.sede==3) {
                         data+=`
                         <tr alumnoId = ${element.id}>
                         <td>${element.id}</td>
@@ -25,7 +25,6 @@ $(document).ready(()=>{
                         <td>${element.numeroDocumento}</td>
                         <td>${element.nombre}</td>
                         <td>${element.nombreUsuario}</td>
-                        <td>${element.email}</td>
                         <td>${element.sede}</td>
                         <td>
                         <button id="btn-details" class="btn btn-warning">Detalles</button>
@@ -188,7 +187,6 @@ $(document).ready(()=>{
                 <strong> Nombre </strong> : ${res.nombre}<br>
                 <strong> Usuario </strong> : ${res.nombreUsuario}<br>
                 <strong> Sede </strong> : ${res.sede}<br><br>
-                 <strong> Email </strong> : ${res.email}<br><br>
 
                 <button id="btn-limpiar" class="btn btn-warning">Limpiar</button>
 
@@ -255,7 +253,6 @@ $(document).ready(()=>{
                 $('#nombreUsuario').val(res.nombreUsuario);
                 $('#email').val(res.email);
                 $('#id').val(res.id);
-                $('#sede').val(res.sede);
                }
             })
         })

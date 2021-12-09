@@ -118,9 +118,9 @@ h1{
 #cajonesUsuarios {
     display: flex;
     justify-content: center;
-    flex-direction: row-reverse;
-    flex-wrap: unset;
-    align-items: baseline;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
     align-content: stretch;
 } 
 
@@ -128,8 +128,8 @@ h1{
    width: 100%;
    height: 100%;
     background-repeat: no-repeat;
-  /*   justify-content: center; */
-    background-image: url(https://media.istockphoto.com/photos/healthy-eating-background-food-photography-different-fruits-and-picture-id515593512);
+    justify-content: center;
+    background-image: url(https://envato-shoebox-0.imgix.net/4ed0/80f1-e534-4b02-9cc2-e2f852cd58ce/back_b261.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=1600&s=ee6ac1600b3ad3500df8f313e85bb1fb);
 }
 
 .botonUsuario{
@@ -145,4 +145,13 @@ h1{
     background-color: #198754;
     border-color: #198754;
     width: inherit;
+}
+
+.botonCerrarSesion{
+    background-color:#caf0f8;
+    width: 100px;
+    height: 30px;
+    border-radius: 100px;
+   /*  color:cyan; */
+    font-size: 8px;
 }

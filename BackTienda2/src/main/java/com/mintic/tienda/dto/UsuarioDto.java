@@ -18,14 +18,7 @@ public class UsuarioDto {
 	
 	private String email;
 	
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
+	private Long sede;
 
 	public Long getId() {
 		return id;
@@ -74,6 +67,28 @@ public class UsuarioDto {
 	public void setNombreUsuario(String nombreUsuario) {
 		this.nombreUsuario = nombreUsuario;
 	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public Long getSede() {
+		return sede;
+	}
+
+	public void setSede(Long sede) {
+		this.sede = sede;
+	}
+	
+	
+	
+
+	
+
 	
 	/*Este es un comentario*/
 }

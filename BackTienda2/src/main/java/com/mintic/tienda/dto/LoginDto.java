@@ -5,6 +5,20 @@ public class LoginDto {
 	private String nombreUsuario;
 	
 	private String password;
+	
+	private Long Sede;
+
+	
+
+	
+
+	public Long getSede() {
+		return Sede;
+	}
+
+	public void setSede(Long sede) {
+		Sede = sede;
+	}
 
 	public String getNombreUsuario() {
 		return nombreUsuario;

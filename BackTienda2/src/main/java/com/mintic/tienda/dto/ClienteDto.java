@@ -1,5 +1,7 @@
 package com.mintic.tienda.dto;
 
+import javax.persistence.Column;
+
 public class ClienteDto {
 	private Long id;
 	
@@ -14,6 +16,9 @@ public class ClienteDto {
 	private String nombre;
 
 	private String telefono;
+	
+	@Column(name = "sede")
+	private Long sede;
 
 	
 	public Long getId() {
@@ -72,4 +77,17 @@ public class ClienteDto {
 		this.telefono = telefono;
 	}
 
+	public Long getSede() {
+		return sede;
+	}
+
+	public void setSede(Long sede) {
+		this.sede = sede;
+	}
+
+	
+
+	
+	
+	
 }

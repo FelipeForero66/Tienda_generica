@@ -36,6 +36,7 @@ public class ProveedorIml implements IProveedorService {
 		p.setNit(proveedorDto.getNit());
 		p.setNombre(proveedorDto.getNombre());
 		p.setTelefono(proveedorDto.getTelefono());
+		p.setSede(proveedorDto.getSede());
 
 		return iProveedor.save(p);
 	}

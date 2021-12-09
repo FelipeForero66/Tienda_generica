@@ -12,7 +12,7 @@ import com.mintic.tienda.entities.Venta;
 public interface IVenta  extends CrudRepository<Venta,Long> {
 	
 	@Query(value="SELECT \r\n"
-			+ "C.nombre,C.numeroDocumento,SUM(V.totalVenta) AS totalVenta\r\n"
+			+ "C.nombre,C.numeroDocumento,C.Sede,SUM(V.totalVenta) AS totalVenta\r\n"
 			+ "FROM cliente C \r\n"
 			+ "INNER JOIN venta V ON (C.id=V.idCliente) \r\n"
 			+ "GROUP BY C.numeroDocumento",nativeQuery = true)

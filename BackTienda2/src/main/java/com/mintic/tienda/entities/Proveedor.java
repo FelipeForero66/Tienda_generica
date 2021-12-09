@@ -1,5 +1,6 @@
 package com.mintic.tienda.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,6 +24,18 @@ public class Proveedor {
 	private String telefono;
 
 	private String nit;
+	
+	@Column(name = "Sede")
+	private Long Sede;
+	
+
+	public Long getSede() {
+		return Sede;
+	}
+
+	public void setSede(Long sede) {
+		Sede = sede;
+	}
 
 	public Long getId() {
 		return id;

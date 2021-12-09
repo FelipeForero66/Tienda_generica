@@ -14,6 +14,7 @@ public class VentaDto {
 
 	private Long valorVenta;
 	
+	private Long Sede;
 	
 	
 	public Long getIvaVenta() {
@@ -64,6 +65,16 @@ public class VentaDto {
 	public void setTotalVenta(Long totalVenta) {
 		this.totalVenta = totalVenta;
 	}
+
+	public Long getSede() {
+		return Sede;
+	}
+
+	public void setSede(Long sede) {
+		Sede = sede;
+	}
+
+	
 
 	
 	

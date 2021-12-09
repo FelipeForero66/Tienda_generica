@@ -39,6 +39,7 @@ public class ClienteImp implements IClienteService {
 		c.setNombre(clienteDto.getNombre());
 		c.setNumeroDocumento(clienteDto.getNumeroDocumento());
 		c.setTelefono(clienteDto.getTelefono());
+		c.setSede(clienteDto.getSede());
 
 		return iCliente.save(c);
 	}
