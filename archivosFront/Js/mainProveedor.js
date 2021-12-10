@@ -1,5 +1,5 @@
 $(document).ready(()=>{
-    alert('Sludos desde main.js con JS6');
+    
 
     
     const sede = 1;
